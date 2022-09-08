@@ -3,8 +3,10 @@
 LKP_SRC = ENV['LKP_SRC'] || File.dirname(File.dirname(File.realpath($PROGRAM_NAME)))
 
 require "#{LKP_SRC}/lib/log"
+require "#{LKP_SRC}/lib/statistics"
 
 stats = {}
+stats.default_proc =  proc {|hash, key| hash[key] = []}
 unit = nil
 
 while (line = $stdin.gets)
@@ -20,10 +22,15 @@ while (line = $stdin.gets)
       log_error 'can not get unit'
       exit
     end
-    stats["#{$1.downcase}_bandwidth_#{unit}"] = line.split[1]
+    stats["#{$1.downcase}_bandwidth_#{unit}"] << line.split[1].to_f
   end
 end
 
-stats.each do |k, v|
-  puts "#{k}: #{v}"
+stats.each do |k,v|
+  if k != "element_size_byte" && k != "array_size"
+    puts "#{k}: #{stats.values_at(k)[0].average.round(2)}"
+    puts "#{k}_harmonicMean: #{stats.values_at(k)[0].harmonic_mean.round(2)}"
+  else
+    puts "#{k}: #{v}"
+  end
 end
