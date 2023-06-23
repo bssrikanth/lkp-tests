@@ -1,0 +1,12 @@
+---
+
+#! lkp-tests/jobs/ebizzy.yaml
+suite: ebizzy
+testcase: ebizzy
+category: benchmark
+nr_threads: 200%
+iterations: 50x
+ebizzy:
+  duration: 15s
+job_origin: lkp-tests/jobs/ebizzy.yaml
+arch: x86_64

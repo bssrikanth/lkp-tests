@@ -1,0 +1,43 @@
+---
+
+#! lkp-tests/jobs/ebizzy.yaml
+suite: ebizzy
+testcase: ebizzy
+category: benchmark
+nr_threads: 400%
+iterations: 15x
+ebizzy:
+  duration: 15s
+job_origin: lkp-tests/jobs/ebizzy.yaml
+arch: x86_64
+
+#! include/category/benchmark
+kmsg:
+boot-time:
+uptime:
+iostat:
+heartbeat:
+vmstat:
+numa-numastat:
+numa-vmstat:
+numa-meminfo:
+proc-vmstat:
+proc-stat:
+meminfo:
+slabinfo:
+interrupts:
+lock_stat:
+perf-sched:
+  lite_mode: 1
+softirqs:
+bdi_dev_mapping:
+diskstats:
+nfsstat:
+cpuidle:
+cpufreq-stats:
+turbostat:
+sched_debug:
+perf-stat:
+mpstat:
+perf-profile:
+  debug_mode: 0
