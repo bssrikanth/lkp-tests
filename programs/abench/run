@@ -1,0 +1,7 @@
+#!/bin/sh
+
+. $LKP_SRC/lib/reproduce-log.sh
+
+cd $BENCHMARK_ROOT/abench/abench || die "abench benchmark is not installed yet"
+
+./abench || die "abench failed to run, try running on 2 socket machine"

@@ -125,3 +125,4 @@ kernbench::
 rt-app::
 coremark::
 fio::
+abench::

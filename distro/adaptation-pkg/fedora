@@ -116,3 +116,4 @@ kvm-kernel-boot-test::
 phoronix-test-suite::
 kernbench::
 rt-app::
+abench::
