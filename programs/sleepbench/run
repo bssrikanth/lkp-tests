@@ -1,0 +1,12 @@
+#!/bin/sh
+# - worker_threads
+# - runtime
+
+. $LKP_SRC/lib/reproduce-log.sh
+
+cd $BENCHMARK_ROOT/sleepbench || die "sleepbench is not installed yet"
+
+[ -n $worker_threads ] || ((worker_threads=`nproc`*9/8))
+[ -n $runtime ] || runtime=30
+
+./sleepbench $worker_threads $runtime || die "sleepbench failed to run"
