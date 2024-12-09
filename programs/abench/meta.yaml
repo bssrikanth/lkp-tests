@@ -1,0 +1,22 @@
+ short_description: >
+     Abench is a microbenchmark that measures the effectiveness of kernel's
+     NUMA Balancing sub-system.
+ description: |
+    Abench is a microbenchmark that measures the effectiveness of kernel's
+    NUMA Balancing sub-system. It does this by allocating memory on remote
+    NUMA node and let a set of threads bound to a node to access the memory.
+    Initially all the accesses will be remote for the threads. The expectation
+    is that the kernel will detect these remote accesses and eventually migrate
+    the pages to the local node. The amount of time taken by the benchmark to
+    complete a fixed number of accesses is a measure of the effectiveness
+    of kernel's NUMA Balancing sub-system. The faster the benchmark completes
+    the better it is.
+
+
+ homepage: git://sos-git.amd.com/linux-tools.git
+
+ parameters:
+
+ results:
+  abench.completion_time:
+  abench.total_thread_execution_time:

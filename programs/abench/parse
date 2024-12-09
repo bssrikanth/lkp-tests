@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+LKP_SRC = ENV['LKP_SRC'] || File.dirname(File.dirname(File.dirname(File.realpath($PROGRAM_NAME))))
+
+require "#{LKP_SRC}/lib/statistics"
+
+$stdin.each_line do |line|
+  case line
+  when /Benchmark completed/
+    puts "completion_time: #{line.split[3]}"
+    puts "total_thread_execution_time: #{line.split[9]}"
+  end
+end
