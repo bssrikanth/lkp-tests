@@ -39,7 +39,7 @@ class LinuxTestcasesTableSet
        nuttcp octane oltp openarena pbzip2 rcurefscale
        perf-bench-numa-mem perf-bench-sched-pipe pft
        phoronix-test-suite pigz pixz plzip postmark pxz qperf
-       reaim sdf siege sockperf speccpu specjbb2013
+       reaim sdf siege sleepbench sockperf speccpu specjbb2013
        specjbb2015 specpower stutter sunspider tbench tcrypt
        thrulay tlbflush unixbench vm-scalability will-it-scale
        chromeswap fio-basic apachebench perf-event-tests swapin
