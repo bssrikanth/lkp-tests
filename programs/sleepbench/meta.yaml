@@ -1,0 +1,13 @@
+short_description:
+The benchmark spawns (logical_cores * 2.25) worker threads, putting
+them to sleep and waking them via an interrupt every 100nsecs.
+
+parameters:
+  worker_threads:
+    This value should be 2.25 * number of logical cores
+  runtime:
+    Runtime of the workload
+
+results:
+  sleepbench.nanosleep_calls_per_sec:
+    Returns the number of nanosleep calls per second

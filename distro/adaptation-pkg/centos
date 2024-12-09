@@ -121,3 +121,4 @@ vm-scalability::
 vmem::
 will-it-scale::
 xfstests::
+sleepbench::
