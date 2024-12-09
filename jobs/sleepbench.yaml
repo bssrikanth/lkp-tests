@@ -1,0 +1,7 @@
+suite: sleepbench
+testcase: sleepbench
+category: benchmark
+
+sleepbench:
+  worker_threads: 144
+  runtime: 30s
