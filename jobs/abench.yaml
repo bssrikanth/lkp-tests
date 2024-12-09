@@ -1,0 +1,5 @@
+suite: abench
+testcase: abench
+category: benchmark
+
+abench:
