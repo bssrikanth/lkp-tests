@@ -1,0 +1,18 @@
+pkgname=sleepbench
+pkgver=git
+pkgrel=1
+arch=('i386' 'x86_64' 'riscv64' 'aarch64')
+url="git://sos-git.amd.com/linux-tools.git"
+license=('GPL')
+source=("git://sos-git.amd.com/linux-tools.git")
+md5sums=('SKIP')
+
+build() {
+       cd "${srcdir}/linux-tools/sched"
+       g++ -o sleepbench -O2 -lpthread sleepbench.cpp
+}
+
+package() {
+       mkdir -p "${pkgdir}/lkp/benchmarks/${pkgname}"
+       cp -r "${srcdir}/linux-tools/sched/sleepbench" "${pkgdir}/lkp/benchmarks/${pkgname}"
+}
