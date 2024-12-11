@@ -15,7 +15,6 @@ clang-6.0: clang.x86_64
 cmake: cmake cmake3
 comerr-dev: libcom_err-devel
 cron: cronie
-curl: curl-minimal
 dbench=4.0-2: dbench
 dc: bc
 default-jdk: java-1.8.0-openjdk-devel 
@@ -65,7 +64,7 @@ libapache2-mpm-itk:
 libapparmor-dev:
 libapparmor1:
 libarchive-dev: libarchive-devel
-libarchive-tools: libarchive
+libarchive-tools: libarchive bsdtar
 libarchive-zip-perl:
 libarchive13: libarchive
 libasound2-dev: alsa-lib-devel
@@ -430,3 +429,4 @@ xutils-dev: imake
 xz-utils: xz
 zlib1g-dev: zlib-devel
 zlib1g: zlib
+libcapstone-dev: capstone-devel
